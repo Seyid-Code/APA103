@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Acer\\Desktop\\02-HeapStackRefOutArrayResize\\02-HeapStackRefOutArrayResize.csproj": {}
+    "C:\\Users\\Acer\\Desktop\\CodeHometask\\02-HeapStackRefOutArrayResize\\02-HeapStackRefOutArrayResize.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Acer\\Desktop\\02-HeapStackRefOutArrayResize\\02-HeapStackRefOutArrayResize.csproj": {
+    "C:\\Users\\Acer\\Desktop\\CodeHometask\\02-HeapStackRefOutArrayResize\\02-HeapStackRefOutArrayResize.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\02-HeapStackRefOutArrayResize\\02-HeapStackRefOutArrayResize.csproj",
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\CodeHometask\\02-HeapStackRefOutArrayResize\\02-HeapStackRefOutArrayResize.csproj",
         "projectName": "02-HeapStackRefOutArrayResize",
-        "projectPath": "C:\\Users\\Acer\\Desktop\\02-HeapStackRefOutArrayResize\\02-HeapStackRefOutArrayResize.csproj",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\CodeHometask\\02-HeapStackRefOutArrayResize\\02-HeapStackRefOutArrayResize.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Acer\\Desktop\\02-HeapStackRefOutArrayResize\\obj\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\CodeHometask\\02-HeapStackRefOutArrayResize\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
