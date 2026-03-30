@@ -9,14 +9,12 @@ namespace CafeOrderSystem
         Juice = 2,
         Water = 3
     }
-
     enum DrinkSize
     {
         Small = 0,
         Medium = 1,
         Large = 2
     }
-
     enum OrderStatus
     {
         New = 0,

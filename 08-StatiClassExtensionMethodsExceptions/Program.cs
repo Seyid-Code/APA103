@@ -37,7 +37,6 @@ class User
     public string Password { get; set; }
     public bool IsLocked { get; set; }
     public int FailedAttempts { get; set; }
-
     public User(string username, string password)
     {
         Username = username;
@@ -50,7 +49,6 @@ class LoginSystem
 {
     private User[] users;
     private const int MaxAttempts = 3;
-
     public LoginSystem()
     {
         users = new User[3];
@@ -58,19 +56,16 @@ class LoginSystem
         users[1] = new User("student", "student123");
         users[2] = new User("teacher", "teacher123");
     }
-
     public void ValidateUsername(string username)
     {
         if (string.IsNullOrWhiteSpace(username) || username.Length < 3)
             throw new InvalidUsernameException("Username must be at least 3 characters and not empty.");
     }
-
     public void ValidatePassword(string password)
     {
         if (string.IsNullOrWhiteSpace(password) || password.Length < 6)
             throw new InvalidPasswordException("Password must be at least 6 characters and not empty.");
     }
-
     private User FindUser(string username)
     {
         foreach (var user in users)
@@ -80,20 +75,15 @@ class LoginSystem
         }
         return null;
     }
-
     public bool Login(string username, string password)
     {
         ValidateUsername(username);
         ValidatePassword(password);
-
         User user = FindUser(username);
-
         if (user == null)
             throw new UserNotFoundException(username);
-
         if (user.IsLocked)
             throw new AccountLockedException();
-
         if (user.Password == password)
         {
             user.FailedAttempts = 0;
@@ -114,7 +104,6 @@ class LoginSystem
             }
         }
     }
-
     public void ShowAllUsers()
     {
         Console.WriteLine("Existing users:");
@@ -132,10 +121,8 @@ class Program
         {
             Console.Write("\nUsername: ");
             string username = Console.ReadLine();
-
             Console.Write("Password: ");
             string password = Console.ReadLine();
-
             try
             {
                 bool success = system.Login(username, password);
