@@ -58,7 +58,6 @@ namespace TransportManagementSystem
         public int EngineCapacity { get; set; }
         public bool HasSidecar { get; set; }
         public string Type { get; set; }
-
         public Motorcycle(string brand, string model, int year, string plateNumber, int engineCapacity, string type, bool hasSidecar, int maxSpeed)
             : base(brand, model, year, plateNumber, maxSpeed)
         {
@@ -82,7 +81,6 @@ namespace TransportManagementSystem
         public double CargoCapacity { get; set; }
         public int AxleCount { get; set; }
         public double CurrentLoad { get; set; }
-
         public Truck(string brand, string model, int year, string plateNumber, double cargoCapacity, int axleCount, double currentLoad, int maxSpeed)
             : base(brand, model, year, plateNumber, maxSpeed)
         {
@@ -162,7 +160,6 @@ namespace TransportManagementSystem
                 if (v is Truck t) return t.CalculateFuelCost(800);
                 return 0;
             });
-
             Vehicle mostExpensiveVehicle = vehicles.First(v =>
             {
                 if (v is Car c) return c.CalculateFuelCost(500) == maxFuelCost;
