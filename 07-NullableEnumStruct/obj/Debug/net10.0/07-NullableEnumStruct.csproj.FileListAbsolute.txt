@@ -1,0 +1,15 @@
+C:\Users\Acer\Desktop\CodeHometask\07-NullableEnumStruct\bin\Debug\net10.0\07-NullableEnumStruct.exe
+C:\Users\Acer\Desktop\CodeHometask\07-NullableEnumStruct\bin\Debug\net10.0\07-NullableEnumStruct.deps.json
+C:\Users\Acer\Desktop\CodeHometask\07-NullableEnumStruct\bin\Debug\net10.0\07-NullableEnumStruct.runtimeconfig.json
+C:\Users\Acer\Desktop\CodeHometask\07-NullableEnumStruct\bin\Debug\net10.0\07-NullableEnumStruct.dll
+C:\Users\Acer\Desktop\CodeHometask\07-NullableEnumStruct\bin\Debug\net10.0\07-NullableEnumStruct.pdb
+C:\Users\Acer\Desktop\CodeHometask\07-NullableEnumStruct\obj\Debug\net10.0\07-NullableEnumStruct.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Acer\Desktop\CodeHometask\07-NullableEnumStruct\obj\Debug\net10.0\07-NullableEnumStruct.AssemblyInfoInputs.cache
+C:\Users\Acer\Desktop\CodeHometask\07-NullableEnumStruct\obj\Debug\net10.0\07-NullableEnumStruct.AssemblyInfo.cs
+C:\Users\Acer\Desktop\CodeHometask\07-NullableEnumStruct\obj\Debug\net10.0\07-NullableEnumStruct.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Desktop\CodeHometask\07-NullableEnumStruct\obj\Debug\net10.0\07-NullableEnumStruct.sourcelink.json
+C:\Users\Acer\Desktop\CodeHometask\07-NullableEnumStruct\obj\Debug\net10.0\07-NullableEnumStruct.dll
+C:\Users\Acer\Desktop\CodeHometask\07-NullableEnumStruct\obj\Debug\net10.0\refint\07-NullableEnumStruct.dll
+C:\Users\Acer\Desktop\CodeHometask\07-NullableEnumStruct\obj\Debug\net10.0\07-NullableEnumStruct.pdb
+C:\Users\Acer\Desktop\CodeHometask\07-NullableEnumStruct\obj\Debug\net10.0\07-NullableEnumStruct.genruntimeconfig.cache
+C:\Users\Acer\Desktop\CodeHometask\07-NullableEnumStruct\obj\Debug\net10.0\ref\07-NullableEnumStruct.dll
