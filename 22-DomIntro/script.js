@@ -1,0 +1,197 @@
+const setStyles = (element, styles) => {
+    Object.assign(element.style, styles);
+};
+
+const app = document.getElementById('app') || document.body;
+setStyles(app, {
+    display: 'flex',
+    justifyContent: 'center',
+    padding: '20px',
+    backgroundColor: '#f4f7f6',
+    fontFamily: '"Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+});
+
+const card = document.createElement('div');
+setStyles(card, {
+    width: '350px',
+    backgroundColor: '#ffffff',
+    borderRadius: '10px',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+    overflow: 'hidden',
+    display: 'flex',
+    flexDirection: 'column'
+});
+
+const imageContainer = document.createElement('div');
+setStyles(imageContainer, {
+    position: 'relative',
+    height: '220px',
+    width: '100%'
+});
+
+const houseImage = document.createElement('img');
+houseImage.src = 'https://images.unsplash.com/photo-1518780602344-9f58ea0408ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'; // Nümunə ev şəkli
+setStyles(houseImage, {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover'
+});
+
+const heartIcon = document.createElement('div');
+heartIcon.innerHTML = '♡';
+setStyles(heartIcon, {
+    position: 'absolute',
+    top: '15px',
+    right: '15px',
+    fontSize: '28px',
+    color: '#ffffff',
+    cursor: 'pointer',
+    userSelect: 'none',
+    transition: 'color 0.3s, transform 0.2s'
+});
+
+let isLiked = false;
+heartIcon.addEventListener('click', () => {
+    isLiked = !isLiked;
+    heartIcon.innerHTML = isLiked ? '♥' : '♡';
+    heartIcon.style.color = isLiked ? '#ff4d4d' : '#ffffff';
+    heartIcon.style.transform = isLiked ? 'scale(1.2)' : 'scale(1)';
+    setTimeout(() => heartIcon.style.transform = 'scale(1)', 200);
+});
+
+imageContainer.appendChild(houseImage);
+imageContainer.appendChild(heartIcon);
+
+const infoSection = document.createElement('div');
+setStyles(infoSection, {
+    padding: '20px'
+});
+
+const typeAge = document.createElement('p');
+typeAge.textContent = 'DETACHED HOUSE • 5Y OLD';
+setStyles(typeAge, {
+    color: '#6c7a89',
+    fontSize: '12px',
+    fontWeight: '700',
+    letterSpacing: '0.5px',
+    margin: '0 0 10px 0'
+});
+
+const price = document.createElement('h2');
+price.textContent = '$750,000';
+setStyles(price, {
+    color: '#1a252f',
+    fontSize: '28px',
+    fontWeight: '400',
+    margin: '0 0 5px 0'
+});
+
+const address = document.createElement('p');
+address.textContent = '742 Evergreen Terrace';
+setStyles(address, {
+    color: '#7f8c8d',
+    fontSize: '15px',
+    margin: '0'
+});
+
+infoSection.appendChild(typeAge);
+infoSection.appendChild(price);
+infoSection.appendChild(address);
+
+const featuresSection = document.createElement('div');
+setStyles(featuresSection, {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    padding: '15px 20px',
+    borderTop: '1px solid #ecf0f1',
+    borderBottom: '1px solid #ecf0f1',
+    gap: '30px'
+});
+
+const createFeature = (iconText, number, label) => {
+    const wrapper = document.createElement('div');
+    setStyles(wrapper, { display: 'flex', alignItems: 'center', gap: '8px', color: '#576574' });
+    
+    const icon = document.createElement('span');
+    icon.innerHTML = iconText;
+    icon.style.fontSize = '20px';
+
+    const text = document.createElement('span');
+    text.innerHTML = `<strong style="color: #2c3e50;">${number}</strong> ${label}`;
+    
+    wrapper.appendChild(icon);
+    wrapper.appendChild(text);
+    return wrapper;
+};
+
+featuresSection.appendChild(createFeature('🛏️', '3', 'Bedrooms'));
+featuresSection.appendChild(createFeature('🛁', '2', 'Bathrooms'));
+
+const realtorSection = document.createElement('div');
+setStyles(realtorSection, {
+    padding: '20px',
+    backgroundColor: '#fafbfc'
+});
+
+const realtorLabel = document.createElement('p');
+realtorLabel.textContent = 'REALTOR';
+setStyles(realtorLabel, {
+    color: '#95a5a6',
+    fontSize: '11px',
+    fontWeight: 'bold',
+    margin: '0 0 10px 0',
+    letterSpacing: '1px'
+});
+
+const profileWrapper = document.createElement('div');
+setStyles(profileWrapper, {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '15px'
+});
+
+const avatar = document.createElement('img');
+avatar.src = 'https://randomuser.me/api/portraits/women/44.jpg';
+setStyles(avatar, {
+    width: '50px',
+    height: '50px',
+    borderRadius: '50%',
+    objectFit: 'cover'
+});
+
+const realtorInfo = document.createElement('div');
+
+const realtorName = document.createElement('p');
+realtorName.textContent = 'Tiffany Heffner';
+setStyles(realtorName, {
+    margin: '0 0 3px 0',
+    fontWeight: 'bold',
+    color: '#2c3e50',
+    fontSize: '16px'
+});
+
+const realtorPhone = document.createElement('a');
+realtorPhone.textContent = '(555) 555-4321';
+realtorPhone.href = 'tel:5555554321';
+setStyles(realtorPhone, {
+    margin: '0',
+    color: '#7f8c8d',
+    fontSize: '14px',
+    textDecoration: 'none',
+    cursor: 'pointer'
+});
+
+realtorInfo.appendChild(realtorName);
+realtorInfo.appendChild(realtorPhone);
+profileWrapper.appendChild(avatar);
+profileWrapper.appendChild(realtorInfo);
+
+realtorSection.appendChild(realtorLabel);
+realtorSection.appendChild(profileWrapper);
+
+card.appendChild(imageContainer);
+card.appendChild(infoSection);
+card.appendChild(featuresSection);
+card.appendChild(realtorSection);
+
+app.appendChild(card);
